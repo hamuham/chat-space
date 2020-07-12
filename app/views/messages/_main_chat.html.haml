@@ -1,0 +1,33 @@
+.chat-main
+  .chat-header
+    .chat-header__group
+      test
+      .chat-header__group__member
+        Member:masa
+    .edit-btn
+      .btn
+      = link_to "#", class: "btn" do
+        Edit
+  .chat-messages
+    .chat-messages__list
+      .chat1
+        .name
+          masa
+        .jikan
+          2019/11/20(wed) 17:43:01
+      .chat2
+      おはよう
+      .chat3
+        .name
+          masa
+        .jikan
+          2019/11/20(wed) 17:43:34
+      .chat4
+      あめ
+  .form
+    .massege
+      %input.message-input-text{  placeholder: "type a messeage", type: "text", class: "text-box"}
+        %label.file
+          = icon('fa','image',class: 'ico')
+          %input.hidden{type: 'file'}
+      %input.form__submit{type: 'submit', value: 'send'}
