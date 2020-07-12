@@ -14,11 +14,11 @@
      background-color: #ffffff;
      display: flex;
      justify-content: space-between;
-       .group-name{
+       &__group{
          margin: 35px 40px;
          font-size: 20px;
          color: #333333;
-         .member{
+         &__member{
            font-size: 12px;
            color: #999999;
            margin-top: 15px;
@@ -37,7 +37,7 @@
    }
    .chat-messages{
      height: calc(100vh - 190px);
-     .messages{
+     &__list{
        margin: 40px 35px
      }
      .chat1{
