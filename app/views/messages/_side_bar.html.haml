@@ -1,14 +1,14 @@
 .chat-side
   .side-header
     .side-item
-      masa
+      = current_user.name
       .box
         .box-iconA
           = link_to "#", class: "icon" do
             = icon('fas', 'edit')
         .box-iconB
-          = link_to "#", class: "icon" do
-            = icon('fas', 'cog')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
   .chat-side__groups
     techcamp
   .chat-side__messages
