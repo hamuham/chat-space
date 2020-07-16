@@ -4,12 +4,16 @@
       = current_user.name
       .box
         .box-iconA
-          = link_to "#", class: "icon" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         .box-iconB
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
-  .chat-side__groups
-    techcamp
-  .chat-side__messages
-    まだメッセージはありません
+  .group-list
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .side-groups
+            = group.name
+          .side-messages
+            まだメッセージはありません
