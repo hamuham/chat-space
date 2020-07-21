@@ -36,88 +36,63 @@
        }
    }
    .chat-messages{
-     height: calc(100vh - 190px);
-     &__list{
-       margin: 40px 35px
-     }
+    height: calc(100vh - 190px);
+    overflow: scroll;
+    &__list{
+      margin: 40px 35px
+    }
      .chat1{
-       display: flex;
-       align-items: center;
-       .name{
-       font-size: 16px;
-       color: #333333;
-       }
-       .jikan{
-         margin-left: 10px;
-         color: #999999;
-         font-size: 12px;
-       }
-     }
-     .chat2{
-       font-size: 14px;
-       color: #434a54;
-       margin-top: 12px;
-     }
-     .chat3{
-       margin-top: 46px;
-       display: flex;
-       align-items: center;
-       .name{
-        font-size: 16px;
-        color: #333333;
-        }
-        .jikan{
-          margin-left: 10px;
-          color: #999999;
-          font-size: 12px;
-        }
-     }
-     .chat4{
-       color: #434a54;
-       font-size: 14px;
-       margin-top: 12px;
-     }
+      display: flex;
+      align-items: center;
+      .user-name{
+      font-size: 16px;
+      color: #333333;
+      }
+      .time{
+        margin-left: 10px;
+        color: #999999;
+        font-size: 12px;
+      }
+    }
    }
-    .form{
+
+    form{
+     padding: 20px 40px;
      height: 90px;
      background-color: #d2d2d2;
      display: flex;
-     align-items: center;
 
-       .massege{
-         display: flex;
+       .input-box{
          width: 100%;
-
+         position: relative;
           .message-input-text{
-            padding:0px 10px;
-            margin-left: 40px;
-            margin-right: 15px;
             width: 100%;
             height: 50px;
+            padding: 0 40 0 10px;
+            border-style: none;
             background-color: #ffffff;
-            position: relative;
            }
 
-            .file{
+          .file{
               position: absolute;
-              right:165px;
-              bottom:-5px;
-              .hidden{
-                display: none;
-              }
+              bottom: 10px;
+              right: 5px;
+            .hidden{
+              display: none;
             }
-
+         }
+       }
            .form__submit{
             border: none;
             font-size: 20px;
-            float: right;
+            padding: 0 30px;
             height: 40px;
-            margin-right: 15px;
+            width: 100px;
+            margin-left: 15px;
             background-color: paleturquoise;
             color: #ffffff;
-            padding: 0 30px;
           }
-       }
+       
    }
 }
 

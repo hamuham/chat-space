@@ -1,33 +1,22 @@
 .chat-main
   .chat-header
     .chat-header__group
-      test
+      = @group.name
       .chat-header__group__member
-        Member:masa
+        - @group.users.each do |user|
+          = user.name
     .edit-btn
       .btn
-      = link_to "#", class: "btn" do
+      = link_to edit_group_path(@group) do
         Edit
   .chat-messages
-    .chat-messages__list
-      .chat1
-        .name
-          masa
-        .jikan
-          2019/11/20(wed) 17:43:01
-      .chat2
-      おはよう
-      .chat3
-        .name
-          masa
-        .jikan
-          2019/11/20(wed) 17:43:34
-      .chat4
-      あめ
+    = render @messages
+   
   .form
-    .massege
-      %input.message-input-text{  placeholder: "type a messeage", type: "text", class: "text-box"}
-        %label.file
-          = icon('fa','image',class: 'ico')
-          %input.hidden{type: 'file'}
-      %input.form__submit{type: 'submit', value: 'send'}
+    = form_for [@group, @message] do |f|
+      .input-box
+        = f.text_field :content, class: 'message-input-text', placeholder: 'type a message'
+        = f.label :image, class: 'file' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
