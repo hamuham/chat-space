@@ -39,7 +39,6 @@ $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
  var url = $(this).attr('action');
-//  console.log(url)
  $.ajax({
    url: url,
    type: "POST",
@@ -52,9 +51,9 @@ $('#new_message').on('submit', function(e){
  .done(function(data){
   
   var html = buildHTML(data);
+  $('.chat-messages').append(html);
   $('.chat-messages').animate({ scrollTop: $('.chat-messages')[0].scrollHeight});
   $('form')[0].reset();
-  $('.chat-messages').append(html);
 })
 .fail(function() {
   alert('メッセージを送信できません');

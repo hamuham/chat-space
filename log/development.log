@@ -19356,3 +19356,45 @@ Processing by MessagesController#create as JSON
 Completed 200 OK in 132ms (Views: 125.6ms | ActiveRecord: 1.9ms)
 
 
+Started POST "/groups/3/messages" for ::1 at 2020-07-26 17:03:16 +0900
+Processing by MessagesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"870XeTHrP8osg4LRqk06kGte+BuyuVntHkn91NhSig3YjiNP5cI4V0OQb1hTtuQxM2H/YWljmnEAFOeKlvWRVQ==", "message"=>{"content"=>"s"}, "group_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `group_id`, `user_id`, `created_at`, `updated_at`) VALUES ('s', 3, 2, '2020-07-26 08:03:16', '2020-07-26 08:03:16')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.json.jbuilder
+  Rendered messages/create.json.jbuilder (0.6ms)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/groups/3/messages" for ::1 at 2020-07-26 17:03:18 +0900
+Processing by MessagesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"870XeTHrP8osg4LRqk06kGte+BuyuVntHkn91NhSig3YjiNP5cI4V0OQb1hTtuQxM2H/YWljmnEAFOeKlvWRVQ==", "message"=>{"content"=>"d"}, "group_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `group_id`, `user_id`, `created_at`, `updated_at`) VALUES ('d', 3, 2, '2020-07-26 08:03:18', '2020-07-26 08:03:18')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.json.jbuilder
+  Rendered messages/create.json.jbuilder (0.6ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/groups/3/messages" for ::1 at 2020-07-26 17:03:20 +0900
+Processing by MessagesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"870XeTHrP8osg4LRqk06kGte+BuyuVntHkn91NhSig3YjiNP5cI4V0OQb1hTtuQxM2H/YWljmnEAFOeKlvWRVQ==", "message"=>{"content"=>"f"}, "group_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `group_id`, `user_id`, `created_at`, `updated_at`) VALUES ('f', 3, 2, '2020-07-26 08:03:20', '2020-07-26 08:03:20')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.json.jbuilder
+  Rendered messages/create.json.jbuilder (0.5ms)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 1.2ms)
+
+
