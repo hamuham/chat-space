@@ -35,28 +35,28 @@ $(function(){
      return html;
    };
  }
-$('#new_message').on('submit', function(e){
- e.preventDefault();
- var formData = new FormData(this);
- var url = $(this).attr('action');
- $.ajax({
-   url: url,
-   type: "POST",
-   data: formData,
-   dataType: 'json',
-   processData: false,
-   contentType: false
- })
+   $('#new_message').on('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr('action');
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
  
- .done(function(data){
+    .done(function(data){
   
-  var html = buildHTML(data);
-  $('.chat-messages').append(html);
-  $('.chat-messages').animate({ scrollTop: $('.chat-messages')[0].scrollHeight});
-  $('form')[0].reset();
-})
-.fail(function() {
-  alert('メッセージを送信できません');
-});
-})
+     var html = buildHTML(data);
+     $('.chat-messages').append(html);
+     $('.chat-messages').animate({ scrollTop: $('.chat-messages')[0].scrollHeight});
+     $('form')[0].reset();
+    })
+   .fail(function() {
+     alert('メッセージを送信できません');
+   });
+  })
 });
