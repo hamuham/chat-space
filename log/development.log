@@ -53425,3 +53425,42 @@ Processing by Api::MessagesController#index as JSON
 Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 1.0ms)
 
 
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Started GET "/" for ::1 at 2020-08-02 20:48:31 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (3.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 2 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 3 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 4 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered messages/_side_bar.html.haml (128.4ms)
+  Rendered groups/index.html.haml within layouts/application (147.1ms)
+  Rendered layouts/_notifications.html.haml (2.5ms)
+Completed 200 OK in 573ms (Views: 530.1ms | ActiveRecord: 16.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('8445024276154775190', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Hoge (20200714135613)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8445024276154775190')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8445024276154775190', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Hoge (20200714135613)
+  [1m[35mSQL (4.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20200714135613'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8445024276154775190')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSHOW CREATE TABLE `group_users`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `groups`[0m
+  [1m[35m (1.9ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'groups'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `messages`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'messages'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
